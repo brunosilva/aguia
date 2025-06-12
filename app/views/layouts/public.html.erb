@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= content_for(:title) || "Autenticação - Instagram" %></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+
+    <%= stylesheet_link_tag "authentication", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
+  </head>
+
+  <body data-flash-messages="<%= JSON.dump(flash.to_a) %>">
+    <main>
+      <section class="container">
+        <%= yield %>
+      </section>
+    </main>
+  </body>
+</html>
