@@ -2,13 +2,13 @@
 
 <% content_for :title, "Abouts" %>
 
-<h1>Abouts</h1>
+<h1>Sobre nós</h1>
 
 <div id="abouts">
   <% @abouts.each do |about| %>
     <%= render about %>
     <p>
-      <%= link_to "Show this about", about %>
+      <%= link_to "Edit this about", edit_about_path(about) %>
     </p>
   <% end %>
 </div>

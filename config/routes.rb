@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
+  resources :banners
   root "mains#index"
+
+
+  devise_for :users, only: %i[sessions registrations passwords]
+  resources :users, only: %i[show], param: :username
+  get '/dashboard', to: 'dashboards#index', as: :dashboard
 
   resources :abouts
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

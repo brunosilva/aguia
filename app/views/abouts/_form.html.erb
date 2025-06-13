@@ -12,18 +12,22 @@
   <% end %>
 
   <div>
+    <%= form.label :aboutus, style: "display: block" %>
+    <%= form.rich_text_area :aboutus %>
+  </div>
+  <div>
     <%= form.label :mission, style: "display: block" %>
-    <%= form.text_area :mission %>
+    <%= form.rich_text_area :mission %>
   </div>
 
   <div>
     <%= form.label :vision, style: "display: block" %>
-    <%= form.text_area :vision %>
+    <%= form.rich_text_area :vision %>
   </div>
 
   <div>
     <%= form.label :values, style: "display: block" %>
-    <%= form.text_area :values %>
+    <%= form.rich_text_area :values %>
   </div>
 
   <div>

@@ -1,5 +1,10 @@
 <div id="<%= dom_id about %>">
   <p>
+    <strong>About us:</strong>
+    <%= about.aboutus.to_s.html_safe %>
+  </p>
+
+  <p>
     <strong>Mission:</strong>
     <%= about.mission %>
   </p>

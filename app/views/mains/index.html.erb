@@ -3,3 +3,38 @@
 <% content_for :title, "Mains" %>
 
 <h1>Mains</h1>
+<% @banners.each do |banner| %>
+  <p>
+    Título
+    <%= banner.title %>
+  </p>
+
+  <p>
+    Missão
+    <%= banner.description %>
+  </p>
+
+<% end %>
+
+
+<% @abouts.each do |about| %>
+  <p>
+    Sobre nós
+    <%= about.aboutus.to_s.html_safe %>
+  </p>
+
+  <p>
+    Missão
+    <%= about.mission.to_s.html_safe %>
+  </p>
+
+  <p>
+    Visão
+    <%= about.vision.to_s.html_safe %>
+  </p>
+
+  <p>
+    Valores
+    <%= about.values.to_s.html_safe %>
+  </p>
+<% end %>

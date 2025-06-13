@@ -14,6 +14,7 @@
   </head>
 
   <body data-flash-messages="<%= JSON.dump(flash.to_a) %>">
+    <%= link_to "Login", user_session_path, class: 'nav-link' %>
     <main>
       <section class="container">
         <%= yield %>
