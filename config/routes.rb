@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :logos
+  resources :products
   resources :banners
   root "mains#index"
 

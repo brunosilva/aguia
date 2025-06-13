@@ -1,6 +1,8 @@
 class MainsController < PublicController
   before_action :fetch_about
   before_action :fetch_banner
+  before_action :fetch_product
+  before_action :fetch_logo
 
   def index
   end
@@ -21,5 +23,13 @@ class MainsController < PublicController
 
   def fetch_banner
     @banners = Banner.all
+  end
+
+  def fetch_product
+    @products = Product.all
+  end
+
+  def fetch_logo
+    @logos = Logo.all
   end
 end

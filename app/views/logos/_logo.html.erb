@@ -1,0 +1,11 @@
+<div id="<%= dom_id logo %>">
+  <% if logo.logotype.attached? %>
+    <%= image_tag logo.logotype %>
+  <% end %>
+
+  <p>
+    <strong>Name:</strong>
+    <%= logo.name %>
+  </p>
+
+</div>

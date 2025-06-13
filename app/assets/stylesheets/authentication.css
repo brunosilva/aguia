@@ -55,3 +55,34 @@ main {
   font-weight: bold;
   font-size: 14px;
 }
+
+.logo-container img {
+  width: 100px;
+  height: auto;
+}
+
+.banner-container {
+  display: flex;
+  position: relative;
+}
+
+.banner-container .text {
+  width: 400px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  flex-direction: column;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  color: #fff;
+}
+
+.banner-container .text h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.banner-container img {
+  max-height: 340px;
+  width: -moz-available;
+}

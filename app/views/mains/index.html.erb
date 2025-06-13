@@ -1,40 +1,19 @@
 <p style="color: green"><%= notice %></p>
 
-<% content_for :title, "Mains" %>
+<% content_for :title, "Águia Suprimentos" %>
 
-<h1>Mains</h1>
-<% @banners.each do |banner| %>
-  <p>
-    Título
-    <%= banner.title %>
-  </p>
-
-  <p>
-    Missão
-    <%= banner.description %>
-  </p>
-
+<% @logos.each do |logo| %>
+  <%= render 'logo', logo: logo %>
 <% end %>
 
+<% @banners.each do |banner| %>
+  <%= render 'banner', banner: banner %>
+<% end %>
 
 <% @abouts.each do |about| %>
-  <p>
-    Sobre nós
-    <%= about.aboutus.to_s.html_safe %>
-  </p>
+  <%= render 'about', about: about %>
+<% end %>
 
-  <p>
-    Missão
-    <%= about.mission.to_s.html_safe %>
-  </p>
-
-  <p>
-    Visão
-    <%= about.vision.to_s.html_safe %>
-  </p>
-
-  <p>
-    Valores
-    <%= about.values.to_s.html_safe %>
-  </p>
+<% @products.each do |product| %>
+  <%= render 'product', product: product %>
 <% end %>
