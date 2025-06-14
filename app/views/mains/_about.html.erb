@@ -1,19 +1,21 @@
-<p>
-  Sobre nós
-  <%= about.aboutus.to_s.html_safe %>
-</p>
+<div class="about-us-container">
+  <h3>Sobre Nós</h3>
+  <span><%= about.aboutus.to_s.html_safe %></span>
+</div>
 
-<p>
-  Missão
-  <%= about.mission.to_s.html_safe %>
-</p>
+<div class="values-container">
+  <div class="values-content">
+    <h3>Missão</h3>
+    <span><%= about.mission.to_s.html_safe %></span>
+  </div>
 
-<p>
-  Visão
-  <%= about.vision.to_s.html_safe %>
-</p>
+  <div class="values-content">
+    <h3>Visão</h3>
+    <span><%= about.vision.to_s.html_safe %></span>
+  </div>
 
-<p>
-  Valores
-  <%= about.values.to_s.html_safe %>
-</p>
+  <div class="values-content">
+    <h3>Valores</h3>
+    <span><%= about.values.to_s.html_safe %></span>
+  </div>
+</div>

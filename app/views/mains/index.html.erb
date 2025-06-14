@@ -17,3 +17,5 @@
 <% @products.each do |product| %>
   <%= render 'product', product: product %>
 <% end %>
+
+<%= render 'contacts/form', contact: Contact.new %>

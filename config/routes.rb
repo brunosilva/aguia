@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :contacts
   resources :logos
   resources :products
   resources :banners
