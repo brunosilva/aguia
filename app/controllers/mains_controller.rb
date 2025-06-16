@@ -3,6 +3,7 @@ class MainsController < PublicController
   before_action :fetch_banner
   before_action :fetch_product
   before_action :fetch_logo
+  before_action :fetch_basic
 
   def index
   end
@@ -31,5 +32,9 @@ class MainsController < PublicController
 
   def fetch_logo
     @logos = Logo.all
+  end
+
+  def fetch_basic
+    @basics = Basic.all
   end
 end

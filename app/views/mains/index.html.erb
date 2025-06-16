@@ -14,8 +14,28 @@
   <%= render 'about', about: about %>
 <% end %>
 
-<% @products.each do |product| %>
-  <%= render 'product', product: product %>
-<% end %>
+<div class="products-container">
+  <h2>Produtos</h2>
+  <div class="title-bar center"></div>
+  <div class="content">
+    <% @products.each do |product| %>
+      <%= render 'product', product: product %>
+    <% end %>
+  </div>
+</div>
 
-<%= render 'contacts/form', contact: Contact.new %>
+
+<div class="contacts-container">
+  <h2>Contatos</h2>
+  <div class="title-bar center"></div>
+  <div class="content">
+    <div class="address">
+      <% @basics.each do |basic| %>
+        <%= render 'basic', basic: basic %>
+      <% end %>
+    </div>
+    <div class="form">
+      <%= render 'contacts/form', contact: Contact.new %>
+    </div>
+  </div>
+</div>

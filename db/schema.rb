@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2025_06_13_195412) do
+ActiveRecord::Schema[7.2].define(version: 2025_06_16_150444) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -64,6 +64,19 @@ ActiveRecord::Schema[7.2].define(version: 2025_06_13_195412) do
   create_table "banners", force: :cascade do |t|
     t.string "title"
     t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "basics", force: :cascade do |t|
+    t.string "name"
+    t.string "address"
+    t.string "number"
+    t.string "neighborhood"
+    t.string "postal"
+    t.string "city"
+    t.string "state"
+    t.string "phone"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

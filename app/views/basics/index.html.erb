@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Basics" %>
+
+<h1>Basics</h1>
+
+<div id="basics">
+  <% @basics.each do |basic| %>
+    <%= render basic %>
+    <p>
+      <%= link_to "Show this basic", basic %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New basic", new_basic_path %>

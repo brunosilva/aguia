@@ -1,23 +1,19 @@
 <%= form_with(model: contact) do |form| %>
-  
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+
+  <div class="field">
+    <%= form.text_field :name, placeholder: 'Nome' %>
   </div>
 
-  <div>
-    <%= form.label :email, style: "display: block" %>
-    <%= form.text_field :email %>
+  <div class="field">
+    <%= form.text_field :email, placeholder: 'E-mail'  %>
   </div>
 
-  <div>
-    <%= form.label :phone, style: "display: block" %>
-    <%= form.text_field :phone %>
+  <div class="field">
+    <%= form.text_field :phone, placeholder: 'Telefone'  %>
   </div>
 
-  <div>
-    <%= form.label :message, style: "display: block" %>
-    <%= form.text_area :message %>
+  <div class="field">
+    <%= form.text_area :message, id: 'contact_message', placeholder: 'Menssagem'  %>
   </div>
 
   <div>

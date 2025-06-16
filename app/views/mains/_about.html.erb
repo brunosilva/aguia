@@ -1,21 +1,27 @@
 <div class="about-us-container">
-  <h3>Sobre Nós</h3>
-  <span><%= about.aboutus.to_s.html_safe %></span>
-</div>
-
-<div class="values-container">
-  <div class="values-content">
-    <h3>Missão</h3>
-    <span><%= about.mission.to_s.html_safe %></span>
+  <div class="about-us">
+    <h3>Sobre Nós</h3>
+    <div class="title-bar"></div>
+    <span><%= about.aboutus.to_s.html_safe %></span>
   </div>
 
-  <div class="values-content">
-    <h3>Visão</h3>
-    <span><%= about.vision.to_s.html_safe %></span>
-  </div>
+  <div class="values">
+    <div class="values-content">
+      <h3>Missão</h3>
+      <div class="title-bar"></div>
+      <span><%= about.mission.to_s.html_safe %></span>
+    </div>
 
-  <div class="values-content">
-    <h3>Valores</h3>
-    <span><%= about.values.to_s.html_safe %></span>
+    <div class="values-content">
+      <h3>Visão</h3>
+      <div class="title-bar"></div>
+      <span><%= about.vision.to_s.html_safe %></span>
+    </div>
+
+    <div class="values-content">
+      <h3>Valores</h3>
+      <div class="title-bar"></div>
+      <span><%= about.values.to_s.html_safe %></span>
+    </div>
   </div>
 </div>

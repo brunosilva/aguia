@@ -1,4 +1,6 @@
-<% if product.image.attached? %>
+<div class="product">
+  <% if product.image.attached? %>
   <%= image_tag product.image %>
-<% end %>
-<%= product.name %>
+  <% end %>
+  <%= product.name %>
+</div>
