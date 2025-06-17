@@ -1,4 +1,24 @@
-
 <% content_for :title, "Dashboard" %>
 
-<h1>Dashboard</h1>
+<h1>Contatos</h1>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Email</th>
+      <th scope="col">Telefone</th>
+      <th scope="col">Mensagem</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @contacts.each do |contact| %>
+      <%= render 'table_row', contact: contact %>
+    <% end %>
+  </tbody>
+</table>
+
+<div id="contacts">
+
+</div>

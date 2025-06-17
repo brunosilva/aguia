@@ -184,6 +184,27 @@ main {
     margin-bottom: 15px;
   }
 
+  .contacts-container .content .form .action-buttom input[type="submit"]{
+    width: 100%;
+    padding: 10px 0;
+    background-color: rgb(241, 17, 17);
+    border: 1px solid rgb(241, 17, 17);
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .contacts-container .content .form .action-buttom input[type="submit"]:hover{
+    width: 100%;
+    padding: 10px 0;
+    background-color: rgb(230, 11, 11);
+    border: 1px solid rgb(230, 11, 11);
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
 
 
 @media screen and (max-width: 862px) {
