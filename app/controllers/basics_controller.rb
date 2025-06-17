@@ -25,7 +25,7 @@ class BasicsController < ApplicationController
 
     respond_to do |format|
       if @basic.save
-        format.html { redirect_to @basic, notice: "Basic was successfully created." }
+        format.html { redirect_to basics_path, notice: "Basic was successfully created." }
         format.json { render :show, status: :created, location: @basic }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +38,7 @@ class BasicsController < ApplicationController
   def update
     respond_to do |format|
       if @basic.update(basic_params)
-        format.html { redirect_to @basic, notice: "Basic was successfully updated." }
+        format.html { redirect_to basics_path, notice: "Basic was successfully updated." }
         format.json { render :show, status: :ok, location: @basic }
       else
         format.html { render :edit, status: :unprocessable_entity }

@@ -1,11 +1,14 @@
-<div id="<%= dom_id logo %>">
-  <% if logo.logotype.attached? %>
-    <%= image_tag logo.logotype %>
-  <% end %>
-
-  <p>
-    <strong>Name:</strong>
-    <%= logo.name %>
-  </p>
-
+<div id="<%= dom_id logo %>" class="admin-container">
+  <div class="content">
+    <div class="title">Nome</div>
+    <div class="text"><%= logo.name %></div>
+  </div>
+  <div class="content">
+    <div class="title">Logo</div>
+    <div class="text logo">
+      <% if logo.logotype.attached? %>
+        <%= image_tag logo.logotype %>
+      <% end %>
+    </div>
+  </div>
 </div>

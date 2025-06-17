@@ -1,22 +1,18 @@
-<div id="<%= dom_id about %>">
-  <p>
-    <strong>About us:</strong>
-    <%= about.aboutus.to_s.html_safe %>
-  </p>
-
-  <p>
-    <strong>Mission:</strong>
-    <%= about.mission %>
-  </p>
-
-  <p>
-    <strong>Vision:</strong>
-    <%= about.vision %>
-  </p>
-
-  <p>
-    <strong>Values:</strong>
-    <%= about.values %>
-  </p>
-
+<div id="<%= dom_id about %>" class="admin-container">
+  <div class="content">
+    <div class="title">Sobre Nós</div>
+    <div class="text"><%= about.aboutus.to_s.html_safe %></div>
+  </div>
+  <div class="content">
+    <div class="title">Missão</div>
+    <div class="text"><%= about.mission.to_s.html_safe %></div>
+  </div>
+  <div class="content">
+    <div class="title">Visão</div>
+    <div class="text"><%= about.vision.to_s.html_safe %></div>
+  </div>
+  <div class="content">
+    <div class="title">Valores</div>
+    <div class="text"><%= about.values.to_s.html_safe %></div>
+  </div>
 </div>

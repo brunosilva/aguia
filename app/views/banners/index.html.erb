@@ -2,15 +2,15 @@
 
 <% content_for :title, "Banners" %>
 
-<h1>Banners</h1>
+<h1>Banner</h1>
 
 <div id="banners">
   <% @banners.each do |banner| %>
+  <% if banner.title.blank? %>
+    <%= link_to "Novo Banner", new_banner_path, class: 'btn btn-primary' %>
+  <% else %>
+    <%= link_to "Editar Banner", edit_banner_path(banner), class: 'btn btn-primary' %>
+  <% end %>
     <%= render banner %>
-    <p>
-      <%= link_to "Show this banner", banner %>
-    </p>
   <% end %>
 </div>
-
-<%= link_to "New banner", new_banner_path %>

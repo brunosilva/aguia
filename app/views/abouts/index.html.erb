@@ -6,11 +6,11 @@
 
 <div id="abouts">
   <% @abouts.each do |about| %>
+    <% if about.aboutus.blank? %>
+      <%= link_to "Novo Sobre nós", new_about_path, class: 'btn btn-primary' %>
+    <% else %>
+      <%= link_to "Editar Sobre nós", edit_about_path(about), class: 'btn btn-primary' %>
+    <% end %>
     <%= render about %>
-    <p>
-      <%= link_to "Edit this about", edit_about_path(about) %>
-    </p>
   <% end %>
 </div>
-
-<%= link_to "New about", new_about_path %>

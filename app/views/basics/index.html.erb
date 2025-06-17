@@ -2,15 +2,25 @@
 
 <% content_for :title, "Basics" %>
 
-<h1>Basics</h1>
+<h1>Dados Básicos</h1>
 
-<div id="basics">
-  <% @basics.each do |basic| %>
-    <%= render basic %>
-    <p>
-      <%= link_to "Show this basic", basic %>
-    </p>
-  <% end %>
-</div>
 
-<%= link_to "New basic", new_basic_path %>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Endereço</th>
+      <th scope="col">Bairro</th>
+      <th scope="col">Cidade</th>
+      <th scope="col">Estado</th>
+      <th scope="col">Telefone</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @basics.each do |basic| %>
+      <%= render basic %>
+    <% end %>
+  </tbody>
+</table>

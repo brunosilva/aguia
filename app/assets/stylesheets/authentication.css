@@ -64,6 +64,40 @@ main {
   font-size: 14px;
 }
 
+/* admin-container */
+.admin-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-container .content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+}
+
+.admin-container .content .title{
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.admin-container .content .text {
+  max-width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.admin-container .content .logo img {
+  width: 200px;
+  height: auto;
+}
+
+/* admin */
+.table-product tbody tr td img {
+  width: 50px;
+  height: auto;
+}
+
 .logo-container img {
   width: 100px;
   height: auto;
@@ -81,6 +115,12 @@ main {
     margin: 7px 0 10px 0;
   }
 
+  /* banner */
+  .banner-container img {
+    width: 100%;
+  }
+
+  /* about us */
   .about-us-container {
     width: 100vw;
     display: flex;
@@ -93,7 +133,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    line-height: 22px;
+    line-height: 30px;
     text-align: justify;
     height: fit-content;
   }
@@ -110,7 +150,7 @@ main {
 
   .about-us-container .values-content {
     margin-bottom: 20px;
-    line-height: 22px;
+    line-height: 30px;
     text-align: justify;
   }
 
@@ -227,7 +267,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    line-height: 22px;
+    line-height: 30px;
     text-align: justify;
   }
 
@@ -243,7 +283,7 @@ main {
 
   .about-us-container .values-content {
     margin-bottom: 20px;
-    line-height: 22px;
+    line-height: 30px;
     text-align: justify;
   }
 

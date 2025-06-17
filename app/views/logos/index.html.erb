@@ -6,11 +6,11 @@
 
 <div id="logos">
   <% @logos.each do |logo| %>
+    <% if logo.name.blank? %>
+      <%= link_to "Novo Logo", new_logo_path, class: 'btn btn-primary' %>
+    <% else %>
+      <%= link_to "Editar Logo", edit_logo_path(logo), class: 'btn btn-primary' %>
+    <% end %>
     <%= render logo %>
-    <p>
-      <%= link_to "Show this logo", logo %>
-    </p>
   <% end %>
 </div>
-
-<%= link_to "New logo", new_logo_path %>
