@@ -60,5 +60,5 @@ gem "sassc-rails"
 gem "bootstrap"
 
 gem "devise", "~> 4.9"
-gem "devise-i18n", "~> 1.13"
+gem "devise-i18n", "~> 1.14"
 gem 'activestorage-validator'
