@@ -245,6 +245,12 @@ main {
     cursor: pointer;
   }
 
+  .btn-replied {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+  }
+
 
 
 @media screen and (max-width: 862px) {

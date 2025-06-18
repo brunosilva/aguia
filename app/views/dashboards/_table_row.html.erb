@@ -5,7 +5,14 @@
   <td><%= contact.phone %></td>
   <td><%= contact.message %></td>
   <td>
-    <%= link_to contact, class: "btn btn-primary", data: { bs_toggle: "modal", bs_target: "#exampleModal" } do %>
+    <% if contact.replied %>
+      <span class="badge text-bg-success">Respondido</span>
+    <% else %>
+      <span class="badge text-bg-light">Responder</span>
+    <% end %>
+  </td>
+  <td>
+    <%= link_to contact, class: "btn btn-primary", data: { bs_toggle: "modal", bs_target: "#exampleModal#{contact.id}" } do %>
       <i class="bi bi-envelope-fill"></i> Abrir Contato
     <% end %>
   </td>
@@ -13,7 +20,7 @@
 
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal<%= contact.id %>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-xl">
     <div class="modal-content">
       <div class="modal-header">
@@ -21,6 +28,13 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
+        <div class="btn-replied">
+          <% if contact.replied %>
+            <span class="badge text-bg-success">Respondido</span>
+          <% else %>
+            <%= button_to 'Marcar como Respondido', reply_contact_path(contact), method: :patch, class: 'btn btn-success', data: { confirm: "Tem certeza que deseja marcar como respondido?" } %>
+          <% end %>
+        </div>
         <p>Id: <%= contact.id %></p>
         <p>Nome: <%= contact.name %></p>
         <p>Email: <%= contact.email %></p>

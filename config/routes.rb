@@ -1,10 +1,17 @@
 Rails.application.routes.draw do
+  root "mains#index"
   resources :basics
-  resources :contacts
+  resources :contacts do
+    member do
+      patch :reply
+    end
+  end
+  namespace :public do
+    resources :contacts, only: %i[new create]
+  end
   resources :logos
   resources :products
   resources :banners
-  root "mains#index"
 
 
   devise_for :users, only: %i[sessions registrations passwords]

@@ -3,34 +3,23 @@ class ContactsController < ApplicationController
 
   # GET /contacts or /contacts.json
   def index
-    @contacts = Contact.all
+    @contacts = Contact.order(updated_at: :desc)
   end
 
   # GET /contacts/1 or /contacts/1.json
   def show
   end
 
-  # GET /contacts/new
-  def new
-    @contact = Contact.new
-  end
-
   # GET /contacts/1/edit
   def edit
   end
 
-  # POST /contacts or /contacts.json
-  def create
-    @contact = Contact.new(contact_params)
-
-    respond_to do |format|
-      if @contact.save
-        flash.now[:notice] = "Contato salvo com sucesso!"
-        render :new
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @contact.errors, status: :unprocessable_entity }
-      end
+  def reply
+    @contact = Contact.find(params[:id])
+    if @contact.update(replied: true)
+      redirect_to dashboard_path, notice: "Contato marcado como respondido."
+    else
+      redirect_to dashboard_path, alert: "Não foi possível marcar como respondido."
     end
   end
 
@@ -61,10 +50,5 @@ class ContactsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_contact
       @contact = Contact.find(params[:id])
-    end
-
-    # Only allow a list of trusted parameters through.
-    def contact_params
-      params.require(:contact).permit(:name, :email, :phone, :message)
     end
 end
