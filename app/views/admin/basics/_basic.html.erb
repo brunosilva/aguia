@@ -1,0 +1,30 @@
+<tr id="<%= dom_id basic %>">
+  <th scope="row"><%= basic.id %></th>
+  <td><%= basic.name %></td>
+  <td><%= basic.address %>, <%= basic.number %></td>
+  <td><%= basic.neighborhood %></td>
+  <td><%= basic.city %></td>
+  <td><%= basic.state %></td>
+  <td><%= basic.phone %></td>
+  <td>
+    <%= link_to new_admin_basic_path, class: "btn btn-primary", data: { bs_toggle: "modal", bs_target: "#exampleModal#{basic.id}" } do %>
+      <i class="bi bi-envelope-fill"></i> Editar Dados Básicos
+    <% end %>
+  </td>
+</tr>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal<%= basic.id %>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Editar dados</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <%= render "form", basic: basic %>
+      </div>
+    </div>
+  </div>
+</div>

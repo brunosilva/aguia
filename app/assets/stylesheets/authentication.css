@@ -124,9 +124,11 @@ main {
   .about-us-container {
     width: 100vw;
     display: flex;
+    margin-top: 100px;
   }
 
   .about-us-container .about-us {
+    max-width: 550px;
     padding: 30px;
     margin: 30px;
     background-color: rgba(255, 187, 0, 0.959);
@@ -267,6 +269,7 @@ main {
   }
 
   .about-us-container .about-us {
+    width: fit-content;
     padding: 30px;
     margin: 0;
     background-color: rgba(255, 187, 0, 0.959);

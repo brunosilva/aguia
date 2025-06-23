@@ -1,4 +1,4 @@
-class MainsController < Public::PublicController
+class MainsController < PublicController
   before_action :fetch_about
   before_action :fetch_banner
   before_action :fetch_product

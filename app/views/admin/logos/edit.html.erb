@@ -1,0 +1,12 @@
+<% content_for :title, "Editing logo" %>
+
+<h1>Editing logo</h1>
+
+<%= render "form", logo: @logo %>
+
+<br>
+
+<div>
+  <%= link_to "Show this logo", admin_logo_path(@logo) %> |
+  <%= link_to "Back to logos", admin_logos_path %>
+</div>

@@ -1,0 +1,57 @@
+<%= form_with(model: [:admin, basic]) do |form| %>
+  <% if basic.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(basic.errors.count, "error") %> prohibited this basic from being saved:</h2>
+
+      <ul>
+        <% basic.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :address, style: "display: block" %>
+    <%= form.text_field :address %>
+  </div>
+
+  <div>
+    <%= form.label :number, style: "display: block" %>
+    <%= form.text_field :number %>
+  </div>
+
+  <div>
+    <%= form.label :neighborhood, style: "display: block" %>
+    <%= form.text_field :neighborhood %>
+  </div>
+
+  <div>
+    <%= form.label :postal, style: "display: block" %>
+    <%= form.text_field :postal %>
+  </div>
+
+  <div>
+    <%= form.label :city, style: "display: block" %>
+    <%= form.text_field :city %>
+  </div>
+
+  <div>
+    <%= form.label :state, style: "display: block" %>
+    <%= form.text_field :state %>
+  </div>
+
+  <div>
+    <%= form.label :phone, style: "display: block" %>
+    <%= form.text_field :phone %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

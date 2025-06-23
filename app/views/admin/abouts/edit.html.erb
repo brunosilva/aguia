@@ -1,0 +1,12 @@
+<% content_for :title, "Editing about" %>
+
+<h1>Editar sobre nós</h1>
+
+<%= render "form", about: @about %>
+
+<br>
+
+<div>
+  <%= link_to "Show this about", admin_about_path(@about) %> |
+  <%= link_to "Back to abouts", admin_abouts_path %>
+</div>

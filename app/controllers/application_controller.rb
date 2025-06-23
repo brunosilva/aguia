@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
 
   def after_sign_in_path_for(resource)
     # Redirecionar para uma página específica, como dashboard
-    dashboard_path
+    admin_dashboard_path
   end
 
   layout :layout_by_resource

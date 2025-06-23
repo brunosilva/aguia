@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Abouts" %>
+
+<h1>Sobre nós</h1>
+
+<div id="abouts">
+  <% @abouts.each do |about| %>
+    <% if about.aboutus.blank? %>
+      <%= link_to "Novo Sobre nós", new_admin_about_path, class: 'btn btn-primary' %>
+    <% else %>
+      <%= link_to "Editar Sobre nós", edit_admin_about_path(about), class: 'btn btn-primary' %>
+    <% end %>
+    <%= render about %>
+  <% end %>
+</div>

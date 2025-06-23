@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Logos" %>
+
+<h1>Logos</h1>
+
+<div id="logos">
+  <% @logos.each do |logo| %>
+    <% if logo.name.blank? %>
+      <%= link_to "Novo Logo", new_admin_logo_path, class: 'btn btn-primary' %>
+    <% else %>
+      <%= link_to "Editar Logo", edit_admin_logo_path(logo), class: 'btn btn-primary' %>
+    <% end %>
+    <%= render logo %>
+  <% end %>
+</div>

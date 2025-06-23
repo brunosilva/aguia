@@ -1,24 +1,26 @@
 Rails.application.routes.draw do
   root "mains#index"
-  resources :basics
-  resources :contacts do
-    member do
-      patch :reply
-    end
-  end
-  namespace :public do
-    resources :contacts, only: %i[new create]
-  end
-  resources :logos
-  resources :products
-  resources :banners
-
-
+  resources :contacts, only: %i[new create]
   devise_for :users, only: %i[sessions registrations passwords]
-  resources :users, only: %i[show], param: :username
-  get '/dashboard', to: 'dashboards#index', as: :dashboard
 
-  resources :abouts
+  namespace :admin do
+    resources :abouts
+    resources :basics
+    resources :logos
+    resources :products
+    resources :banners
+    resources :contacts do
+      member do
+        patch :reply
+      end
+    end
+    resources :users, only: %i[show], param: :username
+    resources :sessions, only: [:new, :create, :destroy]
+    get '/dashboard', to: 'dashboards#index', as: :dashboard
+  end
+
+
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
