@@ -253,6 +253,11 @@ main {
     margin-bottom: 20px;
   }
 
+  .footer-container{
+    background-color: rgb(230, 11, 11);
+    padding: 50px 30px;
+  }
+
 
 
 @media screen and (max-width: 862px) {

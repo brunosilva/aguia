@@ -39,3 +39,12 @@
     </div>
   </div>
 </div>
+
+
+<div class="footer-container">
+  <div class="address">
+    <% @basics.each do |basic| %>
+      <%= render 'footer', basic: basic %>
+    <% end %>
+  </div>
+</div>
