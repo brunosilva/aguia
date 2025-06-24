@@ -9,6 +9,10 @@
   font-optical-sizing: auto;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--color-white-bis);
   font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -98,15 +102,54 @@ main {
   height: auto;
 }
 
-.logo-container img {
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 7px 30px;
+}
+
+.header-container img {
   width: 100px;
   height: auto;
+}
+
+.header-container .menu {
+  display: flex;
+  align-items: center;
+}
+
+.header-container .menu ul {
+  display: flex;
+  gap: 20px;
 }
 
   .center {
     display: flex;
     margin: 7px auto 10px !important;
   }
+
+
+.whatsapp-link {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  background-color: #25D366;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 1000;
+}
+
+.whatsapp-link i {
+  font-size: 20px;
+}
+
+
 
   .title-bar {
     width: 100px;
@@ -160,6 +203,10 @@ main {
     display: flex;
     flex-direction: column;
     margin: 100px 30px;
+  }
+
+  .products-container .title-bar {
+    margin-bottom: 25px !important;
   }
 
   .products-container h2, .contacts-container h2 {
@@ -258,6 +305,25 @@ main {
     padding: 50px 30px;
   }
 
+  .footer-container .address p{
+    line-height: 22px;
+    color: #fff;
+  }
+
+ .right-container{
+    padding: 35px 30px;
+  }
+
+
+ .right-container .property{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .contacts-info-container .social .instagram svg {
+    width: 60px;
+    height: 60px;
+  }
 
 
 @media screen and (max-width: 862px) {

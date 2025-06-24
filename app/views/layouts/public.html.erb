@@ -20,6 +20,10 @@
     <section class="container">
       <%= yield %>
     </section>
-    
+
+    <%= link_to "https://wa.me/5516991503216", class: 'whatsapp-link', target: "_blank", rel: "noopener" do %>
+      <%= image_tag "whatsapp.png", alt: "Fale conosco no WhatsApp", style: "width: 50px; height: 50px;" %>
+    <% end %>
+
   </body>
 </html>

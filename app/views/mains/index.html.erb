@@ -10,11 +10,13 @@
   <%= render 'banner', banner: banner %>
 <% end %>
 
-<% @abouts.each do |about| %>
-  <%= render 'about', about: about %>
-<% end %>
+<div id="about-us">
+  <% @abouts.each do |about| %>
+    <%= render 'about', about: about %>
+  <% end %>
+</div>
 
-<div class="products-container">
+<div class="products-container" id="products">
   <h2>Produtos</h2>
   <div class="title-bar center"></div>
   <div class="content">
@@ -25,7 +27,7 @@
 </div>
 
 
-<div class="contacts-container">
+<div class="contacts-container" id="contacts">
   <h2>Contatos</h2>
   <div class="title-bar center"></div>
   <div class="content">
@@ -47,4 +49,8 @@
       <%= render 'footer', basic: basic %>
     <% end %>
   </div>
+</div>
+
+<div class="right-container">
+  <%= render 'right' %>
 </div>

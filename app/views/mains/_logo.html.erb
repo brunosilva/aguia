@@ -1,5 +1,13 @@
-<div class="logo-container">
+<div class="header-container">
   <% if logo.logotype.attached? %>
     <%= image_tag logo.logotype %>
   <% end %>
+
+  <div class="menu">
+    <ul>
+      <li><%= link_to 'Sobre Nós', '#about-us' %></li>
+      <li><%= link_to 'Produtos', '#products' %></li>
+      <li><%= link_to 'Contato', '#contacts'  %></li>
+    </ul>
+  </div>
 </div>
