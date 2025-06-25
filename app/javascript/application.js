@@ -9,12 +9,34 @@ import "@rails/actiontext"
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  const toggle = document.getElementById("menu-toggle");
+  const toggle = document.getElementById("open-menu");
   const navLinks = document.getElementById("nav-links");
 
   if (toggle && navLinks) {
     toggle.addEventListener("click", () => {
-      navLinks.classList.toggle("active");
+      navLinks.classList.add("active");
+    });
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const close = document.getElementById("close-menu");
+  const navLinks = document.getElementById("nav-links");
+
+  if (close && navLinks) {
+    close.addEventListener("click", () => {
+      navLinks.classList.remove("active");
+    });
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const close = document.querySelectorAll("close-other-menu");
+  const navLinks = document.getElementById("nav-links");
+
+  if (close && navLinks) {
+    close.addEventListener("click", () => {
+      navLinks.classList.remove("active");
     });
   }
 });

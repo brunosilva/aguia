@@ -1,17 +1,20 @@
-<nav class="navbar header-container">
+<nav class="navbar">
   <div class="logo">
     <% if logo.logotype.attached? %>
       <%= image_tag logo.logotype %>
     <% end %>
   </div>
 
-  <button class="menu-toggle" id="menu-toggle">
+  <button class="menu-toggle" id="open-menu">
     ☰
   </button>
 
   <ul class="nav-links" id="nav-links">
-    <li><%= link_to 'Sobre Nós', '#about-us' %></li>
-    <li><%= link_to 'Produtos', '#products' %></li>
-    <li><%= link_to 'Contato', '#contacts'  %></li>
+    <li class="btn-close-menu" id="close-menu">
+      x
+    </li>
+    <li id="close-other-menu"><%= link_to 'Sobre Nós', '#about-us' %></li>
+    <li id="close-other-menu"><%= link_to 'Produtos', '#products' %></li>
+    <li id="close-other-menu"><%= link_to 'Contato', '#contacts'  %></li>
   </ul>
 </nav>
