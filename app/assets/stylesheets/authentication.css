@@ -68,6 +68,65 @@ main {
   font-size: 14px;
 }
 
+/* menu hamburguer */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #333;
+  color: white;
+  padding: 10px 20px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #444;
+    width: 100%;
+  }
+
+  .nav-links.active {
+    display: flex;
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    padding: 20px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+
+
+/* form */
+.form-group {
+  margin-bottom: 15px;
+}
+
 /* admin-container */
 .admin-container {
   display: flex;
@@ -105,7 +164,7 @@ main {
 .header-container {
   display: flex;
   justify-content: space-between;
-  margin: 7px 30px;
+  margin: 0px;
 }
 
 .header-container img {
@@ -121,6 +180,18 @@ main {
 .header-container .menu ul {
   display: flex;
   gap: 20px;
+}
+
+.header-container .menu ul li a {
+  text-decoration: black;
+  color: #6f6767;
+
+  transition: 2ms;
+}
+
+.header-container .menu ul li a:hover {
+  text-decoration: black;
+  color: #000000;
 }
 
   .center {
@@ -162,6 +233,7 @@ main {
   .banner-container img {
     width: 100%;
   }
+
 
   /* about us */
   .about-us-container {
@@ -257,7 +329,6 @@ main {
     background-color:  rgba(255, 187, 0, 0.959);
     margin: 30px;
     padding: 25px;
-    border-radius: 8px;
   }
 
   .contacts-container .content .address strong{
@@ -320,11 +391,20 @@ main {
     justify-content: space-between;
   }
 
+  .right-container .property .nav-link {
+    text-decoration: none;
+    color: #cecece;
+  }
+
   .contacts-info-container .social .instagram svg {
     width: 60px;
     height: 60px;
   }
 
+  .contacts-info-container .tel {
+    line-height: 25px;
+    margin-top: 10px;
+  }
 
 @media screen and (max-width: 862px) {
   .title-bar {

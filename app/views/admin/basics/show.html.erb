@@ -3,8 +3,8 @@
 <%= render @basic %>
 
 <div>
-  <%= link_to "Edit this basic", edit_basic_path(@basic) %> |
-  <%= link_to "Back to basics", basics_path %>
+  <%= link_to "Edit this basic", edit_admin_basic_path(@basic) %> |
+  <%= link_to "Back to basics", admin_basics_path %>
 
   <%= button_to "Destroy this basic", @basic, method: :delete %>
 </div>

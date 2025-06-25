@@ -1,9 +1,14 @@
 <div class="contacts-info-container">
   <strong><%= basic.name %></strong>
   <div class="social">
-    <div class="instagram">
-      <%= embedded_svg "instagram.svg" %>
-    </div>
+    <% if basic.instagram.present? %>
+      <div class="instagram">
+        <%= link_to "https://instagram.com/#{basic.instagram}", target: "_blank", rel: "noopener" do %>
+          <%= embedded_svg "instagram.svg" %>
+        <% end %>
+      </div>
+    <% end %>
+
   </div>
   <div class="tel">
     <%= basic.phone %>

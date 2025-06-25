@@ -26,7 +26,7 @@ module Admin
 
       respond_to do |format|
         if @basic.save
-          format.html { redirect_to basics_path, notice: "Basic was successfully created." }
+          format.html { redirect_to admin_basics_path, notice: "Basic was successfully created." }
           format.json { render :show, status: :created, location: @basic }
         else
           format.html { render :new, status: :unprocessable_entity }
@@ -39,7 +39,7 @@ module Admin
     def update
       respond_to do |format|
         if @basic.update(basic_params)
-          format.html { redirect_to basics_path, notice: "Basic was successfully updated." }
+          format.html { redirect_to admin_basics_path, notice: "Basic was successfully updated." }
           format.json { render :show, status: :ok, location: @basic }
         else
           format.html { render :edit, status: :unprocessable_entity }
@@ -66,7 +66,7 @@ module Admin
 
       # Only allow a list of trusted parameters through.
       def basic_params
-        params.require(:basic).permit(:name, :address, :number, :neighborhood, :postal, :city, :state, :phone)
+        params.require(:basic).permit(:name, :address, :number, :neighborhood, :postal, :city, :state, :phone, :instagram)
       end
   end
 end
