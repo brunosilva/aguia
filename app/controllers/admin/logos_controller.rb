@@ -26,7 +26,7 @@ module Admin
 
       respond_to do |format|
         if @logo.save
-          format.html { redirect_to @logo, notice: "Logo was successfully created." }
+          format.html { redirect_to admin_logos_path, notice: "Logo was successfully created." }
           format.json { render :show, status: :created, location: @logo }
         else
           format.html { render :new, status: :unprocessable_entity }
@@ -39,7 +39,7 @@ module Admin
     def update
       respond_to do |format|
         if @logo.update(logo_params)
-          format.html { redirect_to @logo, notice: "Logo was successfully updated." }
+          format.html { redirect_to admin_logos_path, notice: "Logo was successfully updated." }
           format.json { render :show, status: :ok, location: @logo }
         else
           format.html { render :edit, status: :unprocessable_entity }
