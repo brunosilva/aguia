@@ -18,9 +18,9 @@ module Admin
     def reply
       @contact = Contact.find(params[:id])
       if @contact.update(replied: true)
-        redirect_to dashboard_path, notice: "Contato marcado como respondido."
+        redirect_to admin_dashboard_path, notice: "Contato marcado como respondido."
       else
-        redirect_to dashboard_path, alert: "Não foi possível marcar como respondido."
+        redirect_to admin_dashboard_path, alert: "Não foi possível marcar como respondido."
       end
     end
 

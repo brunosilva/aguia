@@ -31,12 +31,14 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  const close = document.querySelectorAll("close-other-menu");
+  const closeItems = document.querySelectorAll(".close-other-menu");
   const navLinks = document.getElementById("nav-links");
 
-  if (close && navLinks) {
-    close.addEventListener("click", () => {
-      navLinks.classList.remove("active");
+  if (closeItems.length > 0 && navLinks) {
+    closeItems.forEach(item => {
+      item.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+      });
     });
   }
 });

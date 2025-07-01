@@ -1,12 +1,12 @@
 <% content_for :title, "Editing banner" %>
 
-<h1>Editing banner</h1>
+<h1>Editar Banner</h1>
 
 <%= render "form", banner: @banner %>
 
 <br>
 
 <div>
-  <%= link_to "Show this banner", admin_banner_path(@banner) %> |
-  <%= link_to "Back to banners", admin_banners_path %>
+  <%#= link_to "Show this banner", admin_banner_path(@banner) %>
+  <%= link_to "Voltar", admin_banners_path %>
 </div>
