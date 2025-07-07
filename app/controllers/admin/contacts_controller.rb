@@ -4,6 +4,7 @@ module Admin
 
     # GET /contacts or /contacts.json
     def index
+      @user = current_user
       @contacts = Contact.order(updated_at: :desc)
     end
 

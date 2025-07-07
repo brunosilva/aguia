@@ -26,7 +26,7 @@ module Admin
 
       respond_to do |format|
         if @admin_user.save
-          format.html { redirect_to @admin_user, notice: "User was successfully created." }
+          format.html { redirect_to admin_users_path, notice: "User was successfully created." }
           format.json { render :show, status: :created, location: @admin_user }
         else
           format.html { render :new, status: :unprocessable_entity }
@@ -39,7 +39,7 @@ module Admin
     def update
       respond_to do |format|
         if @admin_user.update(admin_user_params)
-          format.html { redirect_to @admin_user, notice: "User was successfully updated." }
+          format.html { redirect_to admin_users_path, notice: "User was successfully updated." }
           format.json { render :show, status: :ok, location: @admin_user }
         else
           format.html { render :edit, status: :unprocessable_entity }
@@ -66,7 +66,7 @@ module Admin
 
       # Only allow a list of trusted parameters through.
       def admin_user_params
-        params.fetch(:admin_user, {})
+        params.require(:user).permit(:name, :username, :email, :password, :password_confirmation)
       end
   end
 end

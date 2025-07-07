@@ -1,6 +1,14 @@
 <% content_for :title, "Dashboard" %>
 
+<div class="alert alert-primary" role="alert">
+  <% if user_signed_in? %>
+    <h3>Olá, <%= current_user.name %>!</h3>
+  <% end %>
+</div>
+
 <h1>Contatos</h1>
+
+
 <table class="table table-hover">
   <thead>
     <tr>
