@@ -42,6 +42,7 @@
                 <li><%= link_to "Produtos", admin_products_path, class: 'nav-link' %></li>
               </ul>
             </li>
+            <li><%= link_to "Usuários", admin_users_path, class: 'nav-link' %></li>
           </ul>
           <%= button_to 'Deslogar', destroy_user_session_path, method: :delete, data: { confirm: "Deslodar da sua conta?" } %>
         </div>

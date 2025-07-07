@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   devise_for :users, only: %i[sessions registrations passwords]
 
   namespace :admin do
+    resources :users
     resources :abouts
     resources :basics
     resources :logos

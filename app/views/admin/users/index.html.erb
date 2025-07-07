@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Users" %>
+
+<h1>Usuários</h1>
+
+<div id="admin_users">
+  <% @admin_users.each do |admin_user| %>
+    <%= render admin_user %>
+    <p>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "Novo Usuário", new_admin_user_path, class: 'btn btn-primary' %>

@@ -1,5 +1,5 @@
 <div class="product">
   <% if product.image.attached? %>
-    <%= image_tag product.image %>
+    <%= image_tag product.image, size: "150x150", onclick: "window.open(this.src, '_blank', 'width=800,height=600')" %>
   <% end %>
 </div>

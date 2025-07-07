@@ -406,7 +406,15 @@ main {
     height: 60px;
   }
 
+  .contacts-info-container .tel svg {
+    width: 45px;
+    height: 45px;
+    margin: 0 10px;
+  }
+
   .contacts-info-container .tel {
+    display: flex;
+    align-items: center;
     line-height: 25px;
     margin-top: 10px;
   }
