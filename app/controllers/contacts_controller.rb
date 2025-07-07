@@ -9,9 +9,10 @@ class ContactsController < PublicController
 
     respond_to do |format|
       if @contact.save
-        format.html { redirect_to root_path, notice: "Logo was successfully created." }
+        format.html { redirect_to root_path, notice: "Contato enviado com sucesso." }
         format.html { render :new }
       else
+        flash.now[:alert] = @post.errors.full_messages.to_sentence
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @contact.errors, status: :unprocessable_entity }
       end

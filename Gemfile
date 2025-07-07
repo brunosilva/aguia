@@ -62,3 +62,4 @@ gem "bootstrap"
 gem "devise", "~> 4.9"
 gem "devise-i18n", "~> 1.13"
 gem 'activestorage-validator'
+gem 'rails_toastify'

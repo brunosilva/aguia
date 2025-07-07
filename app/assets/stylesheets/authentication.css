@@ -247,6 +247,7 @@ main {
 
   .about-us-container .about-us {
     max-width: 550px;
+    width: 50%;
     padding: 30px;
     margin: 30px;
     background-color: rgba(255, 187, 0, 0.959);
@@ -266,6 +267,7 @@ main {
 
   .about-us-container .values {
     padding: 30px;
+    width: 50%;
   }
 
   .about-us-container .values-content {
@@ -442,6 +444,7 @@ main {
 
   .about-us-container .values {
     padding: 30px;
+    width: auto;
   }
 
   .about-us-container .values-content {
